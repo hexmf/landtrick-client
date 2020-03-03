@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Form, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const StyledNav = styled.div`
   position: absolute;
@@ -34,6 +35,7 @@ const LoginButton = styled.button`
     background: hsla(138, 48%, 71%, 1);
   }
   outline: none !important;
+  height: 41px;
 `;
 
 const RegisterButton = styled.button`
@@ -52,6 +54,7 @@ const RegisterButton = styled.button`
     color: #fff;
   }
   outline: none !important;
+  height: 41px;
 `;
 
 const StyledFooter = styled.div`
@@ -68,6 +71,10 @@ const Jumbotron = styled.div`
   color: white;
   background: linear-gradient(90deg, #ec7ab7 14%, #ec7a7a 100%);
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
+`;
+
+const JumbotronText = styled.div`
+  margin-left: 250px;
 `;
 
 const TicketSchedule = styled.div`
@@ -119,10 +126,6 @@ const OriginDeparture = styled.div`
     color: #fff;
   }
 `;
-
-// const RightSideInner = styled.div`
-
-// `
 
 const AllSchedule = styled.div`
   margin-top: 216px;
@@ -222,7 +225,9 @@ class Home extends Component {
                 {/* {this.state.loginError && <p>{this.state.loginError}</p>} */}
               </Form.Group>
               <Modal.Footer>
-                <LoginButton type='submit'>Login</LoginButton>
+                <Link to='/afterlogin'>
+                  <LoginButton type='submit'>Login</LoginButton>
+                </Link>
                 <p>
                   Dont have an account yet? Click <b>here</b>
                 </p>
@@ -288,11 +293,13 @@ class Home extends Component {
         {/* ========================================================== */}
 
         <Jumbotron>
-          <br />
-          <br />
-          <h1>Good Morning, Ticket Seekers!</h1>
-          <h3>Looking for steal deal?</h3>
-          <h3>Register or Login rigt now!!</h3>
+          <JumbotronText>
+            <br />
+            <br />
+            <h1>Good Morning, Ticket Seekers!</h1>
+            <h3>Looking for steal deal?</h3>
+            <h3>Register or Login rigt now!!</h3>
+          </JumbotronText>
         </Jumbotron>
         <TicketSchedule>
           <LeftSide>
