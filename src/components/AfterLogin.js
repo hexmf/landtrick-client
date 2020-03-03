@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button, Modal } from 'react-bootstrap';
 
 import styled from 'styled-components';
 
@@ -27,17 +26,6 @@ class AfterLogin extends Component {
     this.state = {};
   }
 
-  //   handleDropdownHide = () => {
-  //     this.setState({
-  //       modalDropdown: false
-  //     });
-  //   };
-  //   handleDropdownShow = () => {
-  //     this.setState({
-  //       modalDropdown: true
-  //     });
-  //   };
-
   render() {
     return (
       <div>
@@ -48,21 +36,6 @@ class AfterLogin extends Component {
             alt=''
             // onClick={this.state.handleDropdownShow}
           />
-          <Modal.Dialog>
-            <Modal.Header>
-              {/* <Modal.Header closeButton onClick={this.state.handleDropdownHide}> */}
-              <Modal.Title>Modal title</Modal.Title>
-            </Modal.Header>
-
-            <Modal.Body>
-              <p>Modal body text goes here.</p>
-            </Modal.Body>
-
-            <Modal.Footer>
-              <Button variant='secondary'>Close</Button>
-              <Button variant='primary'>Save changes</Button>
-            </Modal.Footer>
-          </Modal.Dialog>
         </StyledNav>
       </div>
     );
