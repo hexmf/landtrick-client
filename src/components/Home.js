@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Form, Modal } from 'react-bootstrap';
 
 const StyledNav = styled.div`
   position: absolute;
@@ -155,10 +156,29 @@ const Train = styled.div`
 class Home extends Component {
   constructor() {
     super();
-    this.state = {
-      txt: ''
-    };
+    this.state = {};
   }
+
+  handleLoginHide = () => {
+    this.setState({
+      modalLogin: false
+    });
+  };
+  handleLoginShow = () => {
+    this.setState({
+      modalLogin: true
+    });
+  };
+  handleRegisterHide = () => {
+    this.setState({
+      modalRegister: false
+    });
+  };
+  handleRegisterShow = () => {
+    this.setState({
+      modalRegister: true
+    });
+  };
 
   render() {
     return (
@@ -168,10 +188,104 @@ class Home extends Component {
             <StyledLogo>LandTick</StyledLogo>
           </div>
           <div>
-            <RegisterButton>Register</RegisterButton>
-            <LoginButton>Login</LoginButton>
+            <RegisterButton onClick={this.handleRegisterShow}>
+              Register
+            </RegisterButton>
+            <LoginButton onClick={this.handleLoginShow}>Login</LoginButton>
           </div>
         </StyledNav>
+        {/* ==================================================================== */}
+        <Modal show={this.state.modalLogin}>
+          <Modal.Header closeButton onClick={this.handleLoginHide}>
+            <Modal.Title>Login</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {/* <Form onSubmit={this.handleLogin}> */}
+            <Form>
+              <Form.Group controlId='formBasicEmail'>
+                <Form.Control
+                  name='Username'
+                  type='text'
+                  placeholder='Username'
+                  // onChange={this.emailOnChange}
+                />
+                {/* <p>{this.state.emailErr}</p> */}
+              </Form.Group>
+              <Form.Group controlId='formBasicPassword'>
+                <Form.Control
+                  name='password'
+                  type='password'
+                  placeholder='Password'
+                  // onChange={this.passwordOnChange}
+                />
+                {/* <p>{this.state.passErr}</p> */}
+                {/* {this.state.loginError && <p>{this.state.loginError}</p>} */}
+              </Form.Group>
+              <Modal.Footer>
+                <LoginButton type='submit'>Login</LoginButton>
+                <p>
+                  Dont have an account yet? Click <b>here</b>
+                </p>
+              </Modal.Footer>
+            </Form>
+          </Modal.Body>
+
+          {/* <StyledButton onClick={this.handleLoginHide}>Close</StyledButton> */}
+          {/* <Link to='/Index'> */}
+          {/* <StyledButton onClick={this.handleLoginShow}>Masok</StyledButton> */}
+
+          {/* </Link> */}
+        </Modal>
+
+        <Modal show={this.state.modalRegister} onHide={this.handleRegisterHide}>
+          {/* <Modal show={this.state.modalRegister}> */}
+          <Modal.Header closeButton onClick={this.handleRegisterHide}>
+            <Modal.Title>Register</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {/* <Form onSubmit={this.handleRegister}> */}
+            <Form>
+              <Form.Group controlId='formBasicText'>
+                <Form.Control
+                  type='text'
+                  placeholder='Full Name'
+                  name='fullName'
+                  // onChange={this.registerOnChange}
+                />
+                <br />
+                <Form.Control
+                  type='Username'
+                  placeholder='Username'
+                  name='username'
+                  // onChange={this.registerOnChange}
+                />
+                <br />
+
+                <Form.Control
+                  type='email'
+                  placeholder='Email'
+                  name='email'
+                  // onChange={this.registerOnChange}
+                />
+                <br />
+
+                <Form.Control
+                  type='password'
+                  placeholder='Password'
+                  name='password'
+                  // onChange={this.registerOnChange}
+                />
+                <br />
+              </Form.Group>
+              <Modal.Footer>
+                {/* <StyledButton onClick={this.handleLoginHide}>Close</StyledButton> */}
+                {/* <StyledButton onClick={this.handleRegisterHide}> */}
+                <RegisterButton type='submit'>Register</RegisterButton>
+              </Modal.Footer>
+            </Form>
+          </Modal.Body>
+        </Modal>
+        {/* ========================================================== */}
 
         <Jumbotron>
           <br />
