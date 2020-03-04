@@ -6,6 +6,8 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/Home';
 import AfterLogin from './components/AfterLogin';
 import MyTicket from './components/MyTicket';
+import Payment from './components/Payment';
+import TicketDetail from './components/Payment';
 
 class App extends Component {
   render() {
@@ -20,6 +22,12 @@ class App extends Component {
           </Route>
           <Route path='/myticket'>
             <MyTicket />
+          </Route>
+          <Route path='/payment'>
+            <Payment />
+          </Route>
+          <Route path='/ticketdetail'>
+            <TicketDetail />
           </Route>
         </Switch>
       </Router>

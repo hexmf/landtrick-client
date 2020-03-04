@@ -1,25 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrain } from '@fortawesome/free-solid-svg-icons';
+import './MyTicket.css';
 
-const StyledNav = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 45px;
-  top: 0px;
-  background: #ffffff;
-  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: space-between;
+const StyledContainer = styled.div`
+  font-family: 'MuseoSans_500';
 `;
 
-const StyledLogo = styled.h1`
-  font-weight: 9;
-  font-size: 20px;
-  color: black;
-  font-style: italic;
-`;
-
-const Ticket = styled.div`
+const StyledTicket = styled.div`
   position: absolute;
   width: 1035px;
   height: 344px;
@@ -31,24 +20,15 @@ const Ticket = styled.div`
   border-radius: 5px;
 `;
 
-const LogoTicket = styled.div`
+const StyledLogo = styled.div`
   width: 186px;
   height: 34.31px;
   left: 232px;
   top: 209.9px;
-  color: white;
 
   background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
   border-radius: 5px;
-  border-bottom-right-radius: 79px;
-  /* cornerRadius: 5px; */
-`;
-
-const TrainName = styled.div`
-  width: 118px;
-  height: 33px;
-  left: 267px;
-  top: 276px;
+  color: white;
 `;
 
 class MyTicket extends Component {
@@ -58,21 +38,85 @@ class MyTicket extends Component {
   }
   render() {
     return (
-      <div>
-        <StyledNav>
-          <StyledLogo>LandTick</StyledLogo>
-          <img
-            src={require('../assets/man.svg')}
-            alt=''
-            // onClick={this.state.handleDropdownShow}
-          />
-        </StyledNav>
-        <h3>My Ticket</h3>
-        <Ticket>
-          <LogoTicket>LandTick</LogoTicket>
-          <TrainName>Argo Bromo</TrainName>
-        </Ticket>
-      </div>
+      <StyledContainer>
+        <h1>My Ticket</h1>
+
+        <StyledTicket>
+          <StyledLogo>
+            <FontAwesomeIcon icon={faTrain} /> Landtick
+          </StyledLogo>
+
+          <div className='keretaapi'>
+            <h3>Kereta Api</h3>
+            <p>Saturday, 21 Februari 2020</p>
+          </div>
+
+          <div className='argowills'>
+            <h3>
+              <b>Argo Wills</b>
+            </h3>
+          </div>
+          <div className='eksekutif'>
+            <p>Eksekutif (H)</p>
+          </div>
+          <div className='pending'>Pending</div>
+
+          <div className='atas'>
+            <div className='jam'>
+              <h6>05.00</h6>
+              <p>21 Februari 2020</p>
+            </div>
+
+            <div className='jam2'>
+              <h6>10.05</h6>
+              <p>21 Februari 2020</p>
+            </div>
+
+            <div className='stasiunasal'>
+              <h6>Jakarta(GMR)</h6>
+              <p>Stasiun Gambir</p>
+            </div>
+
+            <div className='stasiuntujuan'>
+              <h6>Surabaya(SBY)</h6>
+              <p>Stasiun Surabaya</p>
+            </div>
+          </div>
+
+          <div className='bawah'>
+            <div className='notanda'>
+              <p>No. Tanda Pengenal</p>
+            </div>
+            <div className='namapemesan'>
+              <p>Nama Pemesan</p>
+            </div>
+            <div className='Nohandphone'>
+              <p>No.Handphone</p>
+            </div>
+            <div className='Email'>
+              <p>Email</p>
+            </div>
+            <div className='byn-byr'>
+              <button>Bayar Sekarang</button>
+            </div>
+          </div>
+
+          <div className='bawah2'>
+            <div className='notanda'>
+              <p>311750333003970001</p>
+            </div>
+            <div className='namapemesan'>
+              <p>Anto</p>
+            </div>
+            <div className='Nohandphone'>
+              <p>085297181217</p>
+            </div>
+            <div className='Email'>
+              <p>anto@gmail.com</p>
+            </div>
+          </div>
+        </StyledTicket>
+      </StyledContainer>
     );
   }
 }

@@ -216,7 +216,7 @@ class Home extends Component {
                   placeholder='Username'
                   // onChange={this.emailOnChange}
                 />
-                {/* <p>{this.state.emailErr}</p> */}
+                {/* <span>{this.state.emailErr}</span> */}
               </Form.Group>
               <Form.Group controlId='formBasicPassword'>
                 <Form.Control
@@ -225,16 +225,16 @@ class Home extends Component {
                   placeholder='Password'
                   // onChange={this.passwordOnChange}
                 />
-                {/* <p>{this.state.passErr}</p> */}
-                {/* {this.state.loginError && <p>{this.state.loginError}</p>} */}
+                {/* <span>{this.state.passErr}</span> */}
+                {/* {this.state.loginError && <span>{this.state.loginError}</span>} */}
               </Form.Group>
               <Modal.Footer>
                 <Link to='/afterlogin'>
                   <LoginButton type='submit'>Login</LoginButton>
                 </Link>
-                <p>
+                <span>
                   Dont have an account yet? Click <b>here</b>
-                </p>
+                </span>
               </Modal.Footer>
             </Form>
           </Modal.Body>
@@ -315,9 +315,9 @@ class Home extends Component {
           <RightTicketSchedule>
             <div>Trains</div>
             <OriginDestionation>
-              <p>
+              <span>
                 <b>Asal</b>
-              </p>
+              </span>
               <input
                 type='text'
                 id=''
@@ -333,9 +333,9 @@ class Home extends Component {
                   borderRadius: '5px'
                 }}
               ></input>
-              <p>
+              <span>
                 <b>Tujuan</b>
-              </p>
+              </span>
               <input
                 type='text'
                 id=''
@@ -353,9 +353,9 @@ class Home extends Component {
               ></input>
             </OriginDestionation>
             <DateDetails>
-              <p>
+              <span>
                 <b>Tanggal berangkat</b>
-              </p>
+              </span>
               <input
                 type='text'
                 id=''
@@ -386,22 +386,22 @@ class Home extends Component {
                   borderRadius: '5px'
                 }}
               />
-              <p>
+              <span>
                 <b>Return</b>
-              </p>
+              </span>
             </DateDetails>
 
             <AgeDetails>
-              <p>
+              <span>
                 <b>Dewasa</b>
-              </p>
+              </span>
               <select id=''>
                 <option value=''>1</option>
                 <option value=''>2</option>
               </select>
-              <p>
+              <span>
                 <b>Bayi</b>
-              </p>
+              </span>
               <select id=''>
                 <option value=''>1</option>
                 <option value=''>2</option>
@@ -423,25 +423,25 @@ class Home extends Component {
             <h4>Price per person</h4>
           </ScheduleTitle>
           <Train>
-            <p>Argo Wilis</p>
-            <p>05.00</p>
-            <p>10.05</p>
-            <p>5h 05m </p>
-            <p>Rp. 250.000</p>
+            <span>Argo Wilis</span>
+            <span>05.00</span>
+            <span>10.05</span>
+            <span>5h 05m </span>
+            <span>Rp. 250.000</span>
           </Train>
           <Train>
-            <p>Argo Wilis</p>
-            <p>05.00</p>
-            <p>10.05</p>
-            <p>5h 05m </p>
-            <p>Rp. 250.000</p>
+            <span>Argo Wilis</span>
+            <span>05.00</span>
+            <span>10.05</span>
+            <span>5h 05m </span>
+            <span>Rp. 250.000</span>
           </Train>
           <Train>
-            <p>Argo Wilis</p>
-            <p>05.00</p>
-            <p>10.05</p>
-            <p>5h 05m </p>
-            <p>Rp. 250.000</p>
+            <span>Argo Wilis</span>
+            <span>05.00</span>
+            <span>10.05</span>
+            <span>5h 05m </span>
+            <span>Rp. 250.000</span>
           </Train>
         </AllSchedule>
 
