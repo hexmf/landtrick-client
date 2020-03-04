@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Form, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrain, faSearch } from '@fortawesome/free-solid-svg-icons';
+
+const StyledContainer = styled.div`
+  font-family: 'MuseoSans_500';
+`;
 
 const StyledNav = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 45px;
   top: 0px;
@@ -22,7 +28,7 @@ const StyledLogo = styled.h1`
 `;
 
 const LoginButton = styled.button`
-  background: linear-gradient(90deg, #ec7ab7 -0.6%, #ec7a7a 100%);
+  background: #43ab4f;
   border-radius: 5px;
   color: #fff;
   padding: 10px 40px;
@@ -58,7 +64,7 @@ const RegisterButton = styled.button`
 `;
 
 const StyledFooter = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px;
@@ -69,8 +75,7 @@ const Jumbotron = styled.div`
   width: 100%;
   height: 280px;
   color: white;
-  background: linear-gradient(90deg, #ec7ab7 14%, #ec7a7a 100%);
-  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90deg, #0f752e 14%, #e1f7e8 100%);
 `;
 
 const JumbotronText = styled.div`
@@ -78,64 +83,55 @@ const JumbotronText = styled.div`
 `;
 
 const TicketSchedule = styled.div`
-  position: absolute;
   width: 1220px;
   height: 236px;
-  left: 250px;
   top: 250px;
   border: 1px solid gray;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: row;
 `;
 
-const LeftSide = styled.div`
-  position: absolute;
+const LeftTicketSchedule = styled.div`
   width: 20%;
-  height: 100%;
-  background: #f2f2f2;
-  border-radius: 5px;
+  background-color: #f2f2f2;
 `;
 
-const LeftSideInner = styled.div`
+const LeftTicketScheduleInner = styled.div`
+  margin-top: 35px;
   height: 53px;
   background-color: white;
 `;
 
-const RightSide = styled.div`
-  position: absolute;
+const RightTicketSchedule = styled.div`
   width: 80%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: yellow;
-  margin-left: 244px;
 `;
 
-const DewasaBayi = styled.div`
-  margin-left: 500px;
-  margin-top: -90px;
+const OriginDestionation = styled.div`
   display: flex;
-  /* flex-direction: column; */
-  align-items: flex-start;
+  justify-content: space-between;
 `;
 
-const OriginDeparture = styled.div`
+const DateDetails = styled.div`
+  /* display: flex;
+  justify-content: space-between; */
+`;
+
+const AgeDetails = styled.div`
   display: flex;
-  flex-direction: row;
-  &:hover {
-    background: hsla(138, 48%, 61%, 1);
-    color: #fff;
-  }
+  justify-content: space-between;
 `;
 
 const AllSchedule = styled.div`
-  margin-top: 216px;
+  /* margin-top: 216px; */
   justify-content: space-around;
   margin-left: 250px;
 `;
 
 const ScheduleTitle = styled.div`
   display: flex;
-  /* column-gap: 8px; */
   justify-content: space-around;
   width: 1220px;
 `;
@@ -152,6 +148,14 @@ const Train = styled.div`
   border: 1px solid #b7b7b7;
   box-sizing: border-box;
   border-radius: 5px;
+`;
+
+const SearchButton = styled.button`
+  width: 134px;
+  height: 30px;
+  background: #43ab4f;
+  border-radius: 5px;
+  color: white;
 `;
 
 // ==============================================================================================================
@@ -185,7 +189,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <StyledContainer>
         <StyledNav>
           <div>
             <StyledLogo>LandTick</StyledLogo>
@@ -302,20 +306,23 @@ class Home extends Component {
           </JumbotronText>
         </Jumbotron>
         <TicketSchedule>
-          <LeftSide>
-            <LeftSideInner>
-              <p>Train ticket</p>
-            </LeftSideInner>
-          </LeftSide>
-          <RightSide>
-            <h3>Trains</h3>
-            <OriginDeparture>
-              <p>Origin</p>
+          <LeftTicketSchedule>
+            <LeftTicketScheduleInner>
+              {' '}
+              <FontAwesomeIcon icon={faTrain} /> Train Ticket
+            </LeftTicketScheduleInner>
+          </LeftTicketSchedule>
+          <RightTicketSchedule>
+            <div>Trains</div>
+            <OriginDestionation>
+              <p>
+                <b>Asal</b>
+              </p>
               <input
                 type='text'
                 id=''
                 name=''
-                placeholder='New York'
+                placeholder='Jakarta'
                 style={{
                   width: '400px',
                   height: '30px',
@@ -326,12 +333,14 @@ class Home extends Component {
                   borderRadius: '5px'
                 }}
               ></input>
-              <p>Departure</p>
+              <p>
+                <b>Tujuan</b>
+              </p>
               <input
                 type='text'
                 id=''
                 name=''
-                placeholder='Boston'
+                placeholder='Jakarta'
                 style={{
                   width: '400px',
                   height: '30px',
@@ -342,16 +351,18 @@ class Home extends Component {
                   borderRadius: '5px'
                 }}
               ></input>
-            </OriginDeparture>
-            <div>
-              <h4>Date of Departure</h4>
+            </OriginDestionation>
+            <DateDetails>
+              <p>
+                <b>Tanggal berangkat</b>
+              </p>
               <input
                 type='text'
                 id=''
                 name=''
-                placeholder='DD - MM - YYY'
+                placeholder='DDMMYYY'
                 style={{
-                  width: '138px',
+                  width: '113px',
                   height: '30px',
                   left: '446px',
                   top: '409px',
@@ -360,44 +371,47 @@ class Home extends Component {
                   borderRadius: '5px'
                 }}
               ></input>
-              <input type='checkbox' id='' name='' value=''></input>
-              Return
-            </div>
-            <DewasaBayi>
-              <h4>Dewasa</h4>
               <input
-                type='text'
+                type='checkbox'
                 id=''
                 name=''
-                placeholder='DD - MM - YYY'
+                value=''
                 style={{
-                  width: '138px',
-                  height: '30px',
-                  left: '446px',
-                  top: '409px',
-                  border: '2px solid #B1B1B1',
+                  width: '20px',
+                  height: '20',
+                  left: '692px',
+                  top: '465',
+                  border: '1px solid #B1B1B1',
                   boxSizing: 'border-box',
                   borderRadius: '5px'
                 }}
-              ></input>
-              <h4>Bayi</h4>
-              <input
-                type='text'
-                id=''
-                name=''
-                placeholder='DD - MM - YYY'
-                style={{
-                  width: '138px',
-                  height: '30px',
-                  left: '446px',
-                  top: '409px',
-                  border: '2px solid #B1B1B1',
-                  boxSizing: 'border-box',
-                  borderRadius: '5px'
-                }}
-              ></input>
-            </DewasaBayi>
-          </RightSide>
+              />
+              <p>
+                <b>Return</b>
+              </p>
+            </DateDetails>
+
+            <AgeDetails>
+              <p>
+                <b>Dewasa</b>
+              </p>
+              <select id=''>
+                <option value=''>1</option>
+                <option value=''>2</option>
+              </select>
+              <p>
+                <b>Bayi</b>
+              </p>
+              <select id=''>
+                <option value=''>1</option>
+                <option value=''>2</option>
+              </select>
+              <SearchButton>
+                <FontAwesomeIcon icon={faSearch} />
+                Search Ticket
+              </SearchButton>
+            </AgeDetails>
+          </RightTicketSchedule>
         </TicketSchedule>
 
         <AllSchedule>
@@ -431,8 +445,8 @@ class Home extends Component {
           </Train>
         </AllSchedule>
 
-        <StyledFooter></StyledFooter>
-      </div>
+        <StyledFooter />
+      </StyledContainer>
     );
   }
 }
