@@ -7,7 +7,7 @@ import Home from './components/Home';
 import AfterLogin from './components/AfterLogin';
 import MyTicket from './components/MyTicket';
 import Payment from './components/Payment';
-import TicketDetail from './components/Payment';
+import TicketDetail from './components/TicketDetail';
 
 class App extends Component {
   render() {
