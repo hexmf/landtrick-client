@@ -1,0 +1,40 @@
+.pembungkuseditstatus {
+  height: 600px;
+}
+
+.editstatusheader {
+  width: 200px;
+  height: 40px;
+  border-bottom-right-radius: 50px;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+}
+.editstatusheader > img {
+  width: 150px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.silangeditstatus {
+  float: right;
+  margin-right: 10px;
+  margin-top: -34px;
+  cursor: pointer;
+}
+
+.bodyeditstatus {
+  margin-top: 30px;
+}
+
+.btn-edutstatus {
+  width: 200px;
+  height: 40px;
+  margin-left: 106px;
+  background: #0acf83;
+  border-radius: 10px;
+}
+
+.btn-edutstatus {
+  color: white;
+  font-size: 20px;
+}

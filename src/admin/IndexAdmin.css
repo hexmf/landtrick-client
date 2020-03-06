@@ -1,0 +1,49 @@
+.Adminheader {
+  height: 60px;
+  background: #ffffff;
+  box-shadow: 0 0 5px 0 black;
+}
+
+.Adminheader > p {
+  font-size: 40px;
+  float: right;
+  margin-right: 16px;
+  margin-top: -5px;
+  color: rgb(236, 122, 122);
+}
+
+.AdminBody > p {
+  font-weight: 1000;
+  font-size: 30px;
+  margin-left: 120px;
+  margin-top: 60px;
+}
+
+.footersAdmin {
+  background: linear-gradient(90deg, #ec7ab7 0%, #ec7a7a 100%);
+  height: 50px;
+  margin-top: 326px;
+}
+
+#src {
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+}
+
+#pensil {
+  width: 20px;
+  height: 20px;
+  /* margin: 5px; */
+  cursor: pointer;
+  margin-left: 22px;
+  margin-top: -20px;
+}
+
+#delete {
+  width: 20px;
+  margin: 5px;
+  height: 20px;
+  cursor: pointer;
+}

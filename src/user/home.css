@@ -1,0 +1,261 @@
+.headers > p {
+  float: left;
+  margin-left: 120px;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 3px;
+  color: rgb(236, 122, 122);
+}
+
+.slider1 {
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+  height: 300px;
+  padding-left: 250px;
+  margin-top: 45px;
+}
+
+.fortext > h2 {
+  /* padding-top: 20px; */
+
+  /* margin-left: -220px; */
+  color: white;
+  float: left;
+}
+
+.fortext > span {
+  font-size: 24px;
+  color: white;
+  float: left;
+  margin-left: -480px;
+  margin-top: 96px;
+}
+
+.fortext > p {
+  font-size: 24px;
+  color: white;
+  float: left;
+  margin-left: -450px;
+  margin-top: 150px;
+}
+
+.image1 {
+  width: 400px;
+  height: 170px;
+  border-radius: 10px;
+  margin-top: -243px;
+  margin-left: 695px;
+  border: 5px solid #ffffff;
+  position: relative;
+}
+
+.image2 {
+  width: 400px;
+  height: 170px;
+  float: right;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-right: 230px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  border: 5px solid #ffffff;
+  position: relative;
+}
+
+.tiketapi {
+  position: absolute;
+  width: 1220px;
+  height: 236px;
+  left: 250px;
+  top: 329px;
+
+  background: #ffffff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.tiketapigrounddlm {
+  width: 230px;
+  height: 236px;
+  background-color: #f2f2f2;
+}
+
+.pembungkusiconkereta {
+  width: 230px;
+  height: 50px;
+  background-color: #ffffff;
+  padding-top: 12px;
+}
+
+.kereta {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.tiketapitengah {
+  width: 410px;
+  height: 250px;
+  position: absolute;
+  margin-left: 229px;
+  margin-top: -250px;
+}
+
+.tiketapitengah > p {
+  margin-left: 20px;
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+#isitiketapi {
+  margin-top: -50px;
+}
+
+#isitiketapi > h2 {
+  float: left;
+  padding-top: 12px;
+  margin-left: 21px;
+}
+
+#isitiketapi > h3 {
+  margin-left: 20px;
+}
+
+.asal {
+  position: relative;
+  margin-bottom: 1px;
+
+  height: 30px;
+  margin-left: 20px;
+  width: 370px;
+  border: 2px solid #b1b1b1;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.tiketapitengah > h3 {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.chekbox {
+  margin-left: 250px;
+  padding-top: 20px;
+}
+
+.kanan {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: Linear Gradient #ec7ab7 #ec7a7a;
+}
+
+.tiketapikanan {
+  width: 410px;
+  height: 250px;
+  margin-left: 690px;
+  margin-top: -239px;
+}
+
+.tiketapikanan > h2 {
+  margin-left: 20px;
+  padding-top: 10px;
+  font-size: 25px;
+  float: left;
+}
+
+.tujuan {
+  margin-left: 20px;
+
+  width: 370px;
+  border-radius: 5px;
+  height: 30px;
+
+  border: 2px solid #b1b1b1;
+  box-sizing: border-box;
+}
+
+.Dewasa {
+  margin-left: 20px;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #b1b1b1;
+  border-radius: 5px;
+}
+
+.Dewasa1 {
+  margin-left: 20px;
+  margin-top: 35px;
+}
+
+.bayi1 {
+  margin-left: 160px;
+  margin-top: -64px;
+}
+
+.Bayi {
+  margin-left: 140px;
+  width: 100px;
+  position: relative;
+  height: 30px;
+  top: -3px;
+  border: 2px solid #b1b1b1;
+  border-radius: 5px;
+}
+
+.tiketapikanan > button {
+  height: 40px;
+  width: 80px;
+  margin-left: 280px;
+  border-radius: 10px;
+  margin-top: -6px;
+  background-color: Linear Gradient #ec7ab7 #ec7a7a;
+}
+
+.CariTiket {
+  margin-left: 50px;
+  height: 35px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+}
+
+.CariTiket {
+  font-size: 14px;
+  color: white;
+}
+
+.Body {
+  height: 520px;
+  width: 1100px;
+  margin-top: 250px;
+  margin-left: 325px;
+}
+
+.Body > th {
+  margin: 100px;
+}
+
+.pesanan1 {
+  margin-top: 20px;
+  width: 1100px;
+  height: 100px;
+  border: solid #b7b7b7 1px;
+}
+
+.pesanan2 {
+  margin-top: 20px;
+  width: 1100px;
+  height: 100px;
+  border: solid #b7b7b7 1px;
+}
+
+.pesanan3 {
+  margin-top: 20px;
+  width: 1100px;
+  height: 100px;
+  border: solid #b7b7b7 1px;
+}
+
+.footer {
+  height: 70px;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+}

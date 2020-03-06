@@ -1,0 +1,10 @@
+.barcode {
+  float: right;
+  margin-top: -220px;
+  margin-right: 65px;
+}
+
+.barcode > img {
+  width: 120px;
+  height: 120px;
+}

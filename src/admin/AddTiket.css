@@ -1,0 +1,34 @@
+.AddtiketHeader {
+  height: 60px;
+  background: #ffffff;
+  box-shadow: 0 0 5px 0 black;
+}
+
+.AddtiketHeader > p {
+  font-size: 40px;
+  float: right;
+  margin-right: 16px;
+  margin-top: -5px;
+  color: rgb(236, 122, 122);
+}
+
+.AddTiketBody > p {
+  font-weight: 1000;
+  font-size: 30px;
+  margin-left: 120px;
+  margin-top: 60px;
+}
+
+.btn-addtiket {
+  margin-left: 300px;
+  width: 450px;
+  height: 30px;
+  background: #0acf83;
+  border-radius: 5px;
+}
+
+.footersAddTiket {
+  margin-top: 20px;
+  height: 40px;
+  background: linear-gradient(90deg, #ec7ab7 0%, #ec7a7a 100%);
+}

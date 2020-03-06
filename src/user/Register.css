@@ -1,0 +1,15 @@
+.register {
+  width: 120px;
+  height: 40px;
+  margin-top: -39px;
+  margin-left: 650px;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+}
+
+.register {
+  color: white !important;
+}
+
+.register:hover {
+  color: black !important;
+}

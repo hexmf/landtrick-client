@@ -1,0 +1,127 @@
+.pembungkus {
+  width: 800px;
+  height: 900px;
+  margin-left: 320px;
+
+  border-radius: black 5px;
+}
+
+.hkiri {
+  margin-left: 80px;
+  padding-top: 20px;
+}
+
+.hkanan {
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+  border-radius: 5px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  float: right;
+  margin-top: -83px;
+  border-bottom-right-radius: 50px;
+}
+
+.api {
+  margin-top: 55px;
+  margin-left: 80px;
+}
+
+.Argo {
+  margin-left: 80px;
+  margin-top: 50px;
+}
+
+.img > img {
+  width: 35px;
+  height: 155px;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+.awal {
+  margin-left: 130px;
+  margin-top: -166px;
+}
+
+.akhir {
+  margin-left: 130px;
+  margin-top: 50px;
+}
+
+.awal_mulai {
+  margin-left: 320px;
+  margin-top: -200px;
+}
+
+.akhir_sampai {
+  margin-left: 320px;
+  margin-top: 55px;
+}
+
+.forbarcode {
+  margin-left: 600px;
+  margin-top: -205px;
+}
+
+.forbarcode > img {
+  width: 200px;
+  height: 200px;
+}
+
+.footerssskiri > img {
+  width: 80px;
+  height: 60px;
+}
+
+.footerssskiri > p {
+  margin-left: 80px;
+  margin-top: -70px;
+}
+
+.tengahfoterss > img {
+  width: 70px;
+  height: 65px;
+  margin-left: 265px;
+  margin-top: -115px;
+}
+
+.tengahfoterss > p {
+  margin-left: 350px;
+  margin-top: -100px;
+}
+
+.footerssskanan > img {
+  width: 90px;
+  height: 80px;
+  margin-left: 537px;
+  margin-top: -145px;
+}
+
+.footerssskanan > p {
+  margin-left: 630px;
+  margin-top: -120px;
+}
+
+.footersbawah1 {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.footersbawah2 {
+  margin-left: 220px;
+  font-size: 20px;
+  margin-top: -91px;
+}
+
+.footersbawah3 {
+  margin-left: 400px;
+  font-size: 20px;
+  margin-top: -91px;
+}
+
+.footersbawah4 {
+  margin-left: 600px;
+  font-size: 20px;
+  margin-top: -91px;
+}

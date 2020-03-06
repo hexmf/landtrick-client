@@ -1,0 +1,67 @@
+.btn-modal {
+  margin-left: 800px;
+  margin-top: 20px;
+  width: 90px;
+  height: 38px;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+}
+
+.btn-modal {
+  color: white !important;
+}
+
+.btn-modal:hover {
+  color: black !important;
+}
+
+/* .modal-background{
+    background: rgb(199, 65, 240) !important;
+    
+} */
+
+.modal-content {
+  background: white !important;
+  height: relative;
+}
+
+.formlogin {
+  margin-left: 210px;
+  margin-top: 20px;
+  color: black;
+}
+
+.footers {
+  width: 150px;
+  height: 45px;
+  border: 4px;
+  border-radius: 10px;
+  margin-left: 90px;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+}
+
+.footers {
+  color: white;
+}
+
+.Footer-btn {
+  margin-left: 78px;
+  margin-bottom: 36px;
+  margin-top: 20px;
+}
+
+.form-modal {
+  width: 410px;
+  margin-left: 45px;
+}
+
+.ModalX {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 454px;
+  margin-top: -40px;
+  cursor: pointer;
+}

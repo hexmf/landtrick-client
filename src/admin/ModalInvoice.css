@@ -1,0 +1,125 @@
+.ModalInvoiceheaderkiri {
+  width: 120px;
+  height: 35px;
+  background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
+  border-bottom-right-radius: 50px;
+}
+
+.ModalInvoiceheaderkiri > img {
+  width: 95px;
+  height: 20px;
+  margin-left: 7px;
+}
+
+.ModalInvoiceheaderkanan > p {
+  float: right;
+  margin-top: -30px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.textInvoice > h1 {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+.textInvoice > p {
+  margin-left: 20px;
+  color: #767676;
+}
+
+.MInvoiceKeretaApi {
+  margin-top: 35px;
+  margin-left: 20px;
+}
+
+.barcodmodalinvoice {
+  width: 80px;
+  height: 80px;
+  padding-top: -20px;
+  /* margin-right: 70px; */
+  margin-left: 215px;
+  margin-top: -146px;
+}
+
+.argomodalinvoice {
+  margin-left: 20px;
+}
+
+.PPmodalinvoice {
+  margin-left: 20px;
+}
+
+.PPmodalinvoice > img {
+  width: 35px;
+  height: 180px;
+}
+
+.jamberangkatmodalinvoice {
+  margin-left: 60px;
+  margin-top: -185px;
+}
+
+.jamsampaimodalinvoice {
+  margin-left: 65px;
+  margin-top: 60px;
+}
+
+.namakotamulaimodalinvoice {
+  margin-left: 210px;
+  margin-top: -206px;
+}
+
+.namakotaendmodalinvoice {
+  margin-left: 210px;
+  margin-top: 60px;
+}
+
+#uploadfotoinvoice > img {
+  float: right;
+  width: 145px;
+  height: 175px;
+  margin-top: -400px;
+  margin-right: 20px;
+  background: rgba(154, 154, 154, 0.23);
+  border: 3px solid #000000;
+  box-sizing: border-box;
+}
+
+.invoicenopemesanan {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.invoicenamapemesanan {
+  margin-left: 157px;
+  margin-top: -79px;
+}
+
+.invoicenohppemesanan {
+  margin-left: 272px;
+  margin-top: -79px;
+}
+
+.invoiceemailpemesanan {
+  margin-left: 388px;
+  margin-top: -79px;
+}
+
+.footersmodalinvoice {
+  height: 50px;
+  background: #e6e6e6;
+  margin: 10px;
+}
+
+.footersmodalinvoice > h3 {
+  margin-left: 20px;
+  padding-top: 8px;
+}
+
+.footersmodalinvoice > h4 {
+  float: right;
+  margin-right: 20px;
+  margin-top: -37px;
+  color: red;
+}

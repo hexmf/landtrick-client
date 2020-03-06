@@ -1,38 +1,45 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
+import React from 'react';
+// import logo from "./logo.svg";
 import './App.css';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import Home from './user/Home';
+import ApproveTiket from './user/ApproveTiket';
+import Ticket from './user/Ticket';
+import TiketDetail from './user/TiketDetail';
+import Payment from './user/Payment';
+// import IndexAdmin from './admin/IndexAdmin';
+// import AddTiket from './admin/AddTiket';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from './components/Home';
-import AfterLogin from './components/AfterLogin';
-import MyTicket from './components/MyTicket';
-import Payment from './components/Payment';
-import TicketDetail from './components/TicketDetail';
-
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/afterlogin'>
-            <AfterLogin />
-          </Route>
-          <Route path='/myticket'>
-            <MyTicket />
-          </Route>
-          <Route path='/payment'>
-            <Payment />
-          </Route>
-          <Route path='/ticketdetail'>
-            <TicketDetail />
-          </Route>
-        </Switch>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path='/Ticket'>
+          <Ticket />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path='/TiketDetail'>
+          <TiketDetail />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path='/Payment'>
+          <Payment />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path='/ApproveTiket'>
+          <ApproveTiket />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
