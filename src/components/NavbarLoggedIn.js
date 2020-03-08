@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import {
+  Nav,
+  Navbar,
+  Form,
+  NavDropdown,
+  FormControl,
+  Button
+} from 'react-bootstrap';
 
 const StyledContainer = styled.div`
   font-family: 'MuseoSans_500';
@@ -29,32 +37,46 @@ const Logo = styled.div`
 //   font-size: 40px;
 // `;
 
-const UserLoggedIn = styled.div`
-  /* display: flex;
-  flex-wrap: wrap; */
-  width: 80px;
-  margin-left: 1400px;
-  margin-bottom: 10px;
-  margin-top: -50px;
-`;
+// const UserLoggedIn = styled.div`
+//   /* display: flex;
+//   flex-wrap: wrap; */
+//   width: 80px;
+//   margin-left: 1400px;
+//   margin-bottom: 10px;
+//   margin-top: -50px;
+// `;
+
+// MARGIN TOP ILANGIN UNTUK YANG NAVBAR BENERAN
 
 class NavbarLoggedIn extends Component {
+  loggedOutOnPress = () => {
+    console.log(this.props);
+  };
+
   render() {
     return (
       <StyledContainer>
-        <Navs>
-          <Logo>
-            <span>Land Tick</span>
-          </Logo>
-          <UserLoggedIn>
-            <img src={require('../user/Image/orang.PNG')} alt='' />
-            <div>
-              <span>Jae</span>
-            </div>
-          </UserLoggedIn>
-
-          {/* <button className="btn-daftar">Login</button> */}
-        </Navs>
+        <Navbar bg='light' expand='lg'>
+          <Navbar.Brand href='#home'>LinkTicket</Navbar.Brand>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Nav className='ml-auto'>
+              <span>Ari</span>
+              <img src={require('../user/Image/orang.PNG')} alt='' />
+              <NavDropdown title='' id='basic-nav-dropdown'>
+                <NavDropdown.Item href='#action/3.2'>
+                  Ticket Saya
+                </NavDropdown.Item>
+                <NavDropdown.Item href='#action/3.3'>Payment</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item onClick={this.loggedOutOnPress}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Form inline></Form>
+          </Navbar.Collapse>
+        </Navbar>
       </StyledContainer>
     );
   }

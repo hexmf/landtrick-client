@@ -5,18 +5,51 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import './home.css';
 import Navbar from '../components/Navbar';
-// import NavbarLoggedIn from '../components/NavbarLoggedIn';
+import Footer from '../components/Footer';
+
+import NavbarLoggedIn from '../components/NavbarLoggedIn';
 
 const StyledContainer = styled.div`
   font-family: 'MuseoSans_500';
 `;
+const AllSchedule = styled.div`
+  /* margin-top: 216px; */
+  justify-content: space-around;
+  margin-left: 250px;
+`;
+
+const ScheduleTitle = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 1220px;
+`;
+
+const Train = styled.div`
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  /* align-content: center; */
+  /* justify-content: center; */
+  width: 1220px;
+  margin-top: 10px;
+  /* column-gap: 8px; */
+  border: 1px solid #b7b7b7;
+  box-sizing: border-box;
+  border-radius: 5px;
+`;
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isAuth: false
+    };
+  }
   render() {
     return (
       <StyledContainer>
         <Navbar />
-        {/* <NavbarLoggedIn /> */}
+
         <div className='slider1'>
           <div className='fortext'>
             <h2>Selamat Pagi, Ticket Seekers !</h2>
@@ -100,109 +133,39 @@ class Home extends Component {
           </div>
         </div>
         {/* body */}
-        <div className='Body'>
-          <table style={{ marginLeft: '20px' }}>
-            <tr>
-              <th style={{ paddingTop: '30px', paddingLeft: '80px' }}>
-                Nama Kereta
-              </th>
-              <th style={{ paddingTop: '30px', paddingLeft: '80px' }}>
-                Berangkat
-              </th>
-              <th style={{ paddingTop: '30px', paddingLeft: '80px' }}>Tiba</th>
-              <th style={{ paddingTop: '30px', paddingLeft: '80px' }}>
-                Durasi
-              </th>
-              <th style={{ paddingTop: '30px', paddingLeft: '200px' }}>
-                Harga Per Orang
-              </th>
-            </tr>
-          </table>
-          <div className='pesanan1'>
-            <table style={{ marginLeft: '20px' }}>
-              <tr>
-                <th style={{ paddingTop: '30px', paddingLeft: '80px' }}>
-                  Argo Wills
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '120px' }}>
-                  05.00
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '100px' }}>
-                  10.05
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '70px' }}>
-                  5j 05m
-                </th>
-                <th
-                  style={{
-                    paddingTop: '30px',
-                    paddingLeft: '210px',
-                    color: '#EC7A7A'
-                  }}
-                >
-                  Rp. 250.000
-                </th>
-              </tr>
-            </table>
-          </div>
-          <div className='pesanan2'>
-            <table style={{ marginLeft: '20px' }}>
-              <tr>
-                <th style={{ paddingTop: '30px', paddingLeft: '80px' }}>
-                  Argo Wills
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '120px' }}>
-                  05.00
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '100px' }}>
-                  10.05
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '70px' }}>
-                  5j 05m
-                </th>
-                <th
-                  style={{
-                    paddingTop: '30px',
-                    paddingLeft: '210px',
-                    color: '#EC7A7A'
-                  }}
-                >
-                  Rp. 250.000
-                </th>
-              </tr>
-            </table>
-          </div>
-          <div className='pesanan3'>
-            <table style={{ marginLeft: '20px' }}>
-              <tr>
-                <th style={{ paddingTop: '30px', paddingLeft: '80px' }}>
-                  Argo Wills
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '120px' }}>
-                  05.00
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '100px' }}>
-                  10.05
-                </th>
-                <th style={{ paddingTop: '30px', paddingLeft: '70px' }}>
-                  5j 05m
-                </th>
-                <th
-                  style={{
-                    paddingTop: '30px',
-                    paddingLeft: '210px',
-                    color: '#EC7A7A'
-                  }}
-                >
-                  Rp. 250.000
-                </th>
-              </tr>
-            </table>
-          </div>
-        </div>
 
-        {/* footer */}
-        <div className='footer'></div>
+        <AllSchedule>
+          <ScheduleTitle>
+            <h4>Train Name</h4>
+            <h4>Depart</h4>
+            <h4>Arrive</h4>
+            <h4>Duration</h4>
+            <h4>Price per person</h4>
+          </ScheduleTitle>
+          <Train>
+            <span>Argo Wilis</span>
+            <span>05.00</span>
+            <span>10.05</span>
+            <span>5h 05m </span>
+            <span>Rp. 250.000</span>
+          </Train>
+          <Train>
+            <span>Argo Wilis</span>
+            <span>05.00</span>
+            <span>10.05</span>
+            <span>5h 05m </span>
+            <span>Rp. 250.000</span>
+          </Train>
+          <Train>
+            <span>Argo Wilis</span>
+            <span>05.00</span>
+            <span>10.05</span>
+            <span>5h 05m </span>
+            <span>Rp. 250.000</span>
+          </Train>
+        </AllSchedule>
+
+        <Footer />
       </StyledContainer>
     );
   }

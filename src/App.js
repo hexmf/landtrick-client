@@ -6,8 +6,8 @@ import ApproveTiket from './user/ApproveTiket';
 import Ticket from './user/Ticket';
 import TiketDetail from './user/TiketDetail';
 import Payment from './user/Payment';
-// import IndexAdmin from './admin/IndexAdmin';
-// import AddTiket from './admin/AddTiket';
+import IndexAdmin from './admin/IndexAdmin';
+import AddTiket from './admin/AddTiket';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -21,6 +21,16 @@ function App() {
       <Switch>
         <Route path='/Ticket'>
           <Ticket />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path='/IndexAdmin'>
+          <IndexAdmin />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path='/AddTiket'>
+          <AddTiket />
         </Route>
       </Switch>
       <Switch>

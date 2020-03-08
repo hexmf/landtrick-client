@@ -42,7 +42,7 @@ class Navbar extends Component {
           {/* <button className="btn-daftar">Login</button> */}
           <StyledButtons>
             <ButtonToolbar>
-              <Modallogin />
+              <Modallogin isLoggedIn={this.props.isAuth} />
             </ButtonToolbar>
             <ButtonToolbar>
               <Register />
