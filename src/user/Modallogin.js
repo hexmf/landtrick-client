@@ -14,8 +14,7 @@ class Modallogin extends Component {
       modalShow: false,
       password: '',
       username: '',
-      error: '',
-      isAuth: false
+      error: ''
     };
   }
 

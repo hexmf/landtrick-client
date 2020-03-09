@@ -12,3 +12,14 @@ export const userLogin = data => {
     })
   };
 };
+
+export const userRegister = data => {
+  return {
+    type: 'POST_USER_REGISTER',
+    payload: axios({
+      method: 'POST',
+      url: 'http://localhost:5001/api/v1/register',
+      data
+    })
+  };
+};

@@ -21,14 +21,14 @@ const ProfileImage = styled.img`
 
 const DropdownContent = styled.div`
   display: ${props => props.isShow};
-  position: absolute;
+  position: relative;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
 `;
 
 export default class DropDown extends React.Component {
@@ -40,10 +40,11 @@ export default class DropDown extends React.Component {
   }
 
   handleOnClick = () => {
-    console.log(this.state.isShow);
+    // console.log(this.state.isShow);
 
     this.setState({
-      isShow: !this.state.isShow
+      isShow: this.state.isShow,
+      isHide: this.state.isHide
     });
   };
 
@@ -56,12 +57,19 @@ export default class DropDown extends React.Component {
           alt='profile'
           onClick={this.handleOnClick}
         />
-        <DropdownContent isShow={this.state.isShow ? 'flex' : 'none'}>
+        <DropdownContent
+          isShow={this.state.isShow ? 'flex' : this.state.isHide}
+        >
           <div>
-            <Link to='/asdf'>asdf</Link>
+            <Link to='/ticket'>Tiket Saya</Link>
           </div>
+
           <div>
-            <Link to='/asdf'>asdf</Link>
+            <Link to='/payment'>Payment</Link>
+          </div>
+
+          <div>
+            <Link to='/'>Logout</Link>
           </div>
         </DropdownContent>
       </Container>

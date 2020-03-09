@@ -4,12 +4,21 @@ import Home from './Home';
 import { Link } from 'react-router-dom';
 import './Register.css';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import { userRegister } from '../_actions/userA';
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalShow: false
+      modalShow: false,
+      namalengkap: '',
+      username: '',
+      email: '',
+      password: '',
+      jeniskelamin: '',
+      telp: '',
+      alamat: ''
     };
   }
 
@@ -25,9 +34,37 @@ class Register extends Component {
     });
   };
 
-  handleRegisterForm = e => {};
+  // handleRegisterForm = e => {
+  //   namalengkap: this.state.username,
 
-  registerButtononPress = async () => {};
+  // };
+
+  handleRegisterForm = e => {
+    e.preventDefault();
+    this.setState({
+      namalengkap: e.target.value,
+      username: e.target.value,
+      email: e.target.value,
+      password: e.target.value,
+      jeniskelamin: e.target.value,
+      telp: e.target.value,
+      alamat: e.target.value
+    });
+  };
+
+  registerButtonOnPress = () => {
+    // console.log(this.props);
+
+    this.props.userRegister({
+      namelengkap: this.state.namalengkap,
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+      jeniskelamin: this.state.jeniskelamin,
+      telp: this.state.telp,
+      alamat: this.state.alamat
+    });
+  };
 
   render() {
     return (
@@ -51,39 +88,62 @@ class Register extends Component {
             <div>
               <Form className='form-modal'>
                 <Form.Group controlId='formBasicBreeder'>
-                  <Form.Label>Nama Lengkap</Form.Label>
                   <Form.Control
                     type='text'
                     placeholder='Nama Lengkap'
                     name='namalengkap'
-                    onChange={() => {}}
+                    onChange={this.handleRegisterForm}
                   />
                 </Form.Group>
                 <Form.Group controlId='formBasicEmail'>
-                  <Form.Label>Username</Form.Label>
                   <Form.Control
                     type='text'
                     placeholder='Username'
                     name='username'
-                    onChange={() => {}}
+                    onChange={this.handleRegisterForm}
                   />
                 </Form.Group>
                 <Form.Group controlId='formBasicPassword'>
-                  <Form.Label>Email</Form.Label>
                   <Form.Control
                     type='email'
                     placeholder='Email'
                     name='email'
-                    onChange={() => {}}
+                    onChange={this.handleRegisterForm}
                   />
                 </Form.Group>
                 <Form.Group controlId='formBasicPhone'>
-                  <Form.Label>Password</Form.Label>
                   <Form.Control
                     type='password'
                     placeholder='Password'
                     name='password'
-                    onChange={() => {}}
+                    onChange={this.handleRegisterForm}
+                  />
+                </Form.Group>
+                <Form.Control
+                  as='select'
+                  name='jeliskelamin'
+                  placeholder='Jenis Kelamin'
+                  onChange={this.handleregisterForm}
+                >
+                  <option value='1'>Male</option>
+                  <option value='2'>Female</option>
+                </Form.Control>
+                <br />
+                <Form.Group controlId='formBasicBreeder'>
+                  <Form.Control
+                    type='text'
+                    placeholder='Telp'
+                    name='telp'
+                    onChange={this.handleRegisterForm}
+                  />
+                </Form.Group>
+                <Form.Group controlId='formBasicBreeder'>
+                  <Form.Label>Alamat</Form.Label>
+                  <Form.Control
+                    type='text'
+                    placeholder='Alamat'
+                    name='alamat'
+                    onChange={this.handleRegisterForm}
                   />
                 </Form.Group>
               </Form>
@@ -93,7 +153,9 @@ class Register extends Component {
                     Login
                     </Button> */}
               {/* <Link to='/'> */}
-              <button className='footers'>Register</button>
+              <button className='footers' onClick={this.registerButtonOnPress}>
+                Register
+              </button>
               {/* </Link> */}
             </div>
           </Modal>
@@ -103,4 +165,9 @@ class Register extends Component {
   }
 }
 
-export default Register;
+const mapStateToProps = state => ({
+  data: state.data
+});
+
+export default connect(mapStateToProps, { userRegister })(Register);
+// export default Register;

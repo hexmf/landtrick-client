@@ -150,25 +150,64 @@ class Home extends Component {
             <h4>Price per person</h4>
           </ScheduleTitle>
           <Train>
-            <span>Argo Wilis</span>
-            <span>05.00</span>
-            <span>10.05</span>
-            <span>5h 05m </span>
-            <span>Rp. 250.000</span>
+            <div>
+              <span>Argo Wilis</span>
+              <p>Eksekutif (H)</p>
+            </div>
+            <div>
+              <span>05.00</span>
+              <p>Gambir</p>
+            </div>
+            <div>
+              <span>10.05</span>
+              <p>Surabaya</p>
+            </div>
+            <div>
+              <span>5h 05m </span>
+            </div>
+            <div>
+              <span>Rp. 250.000</span>
+            </div>
           </Train>
           <Train>
-            <span>Argo Wilis</span>
-            <span>05.00</span>
-            <span>10.05</span>
-            <span>5h 05m </span>
-            <span>Rp. 250.000</span>
+            <div>
+              <span>Argo Wilis</span>
+              <p>Eksekutif (H)</p>
+            </div>
+            <div>
+              <span>05.00</span>
+              <p>Gambir</p>
+            </div>
+            <div>
+              <span>10.05</span>
+              <p>Surabaya</p>
+            </div>
+            <div>
+              <span>5h 05m </span>
+            </div>
+            <div>
+              <span>Rp. 250.000</span>
+            </div>
           </Train>
           <Train>
-            <span>Argo Wilis</span>
-            <span>05.00</span>
-            <span>10.05</span>
-            <span>5h 05m </span>
-            <span>Rp. 250.000</span>
+            <div>
+              <span>Argo Wilis</span>
+              <p>Eksekutif (H)</p>
+            </div>
+            <div>
+              <span>05.00</span>
+              <p>Gambir</p>
+            </div>
+            <div>
+              <span>10.05</span>
+              <p>Surabaya</p>
+            </div>
+            <div>
+              <span>5h 05m </span>
+            </div>
+            <div>
+              <span>Rp. 250.000</span>
+            </div>
           </Train>
         </AllSchedule>
 
