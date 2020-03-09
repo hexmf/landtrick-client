@@ -15,6 +15,7 @@ const users = (state = initialState, action) => {
         isLoading: true
       };
     case 'POST_USER_LOGIN_FULFILLED':
+      localStorage.setItem('token', action.payload.data.token);
       return {
         ...state,
         error: false,

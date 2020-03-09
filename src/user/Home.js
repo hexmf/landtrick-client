@@ -6,8 +6,9 @@ import styled from 'styled-components';
 import './home.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-import NavbarLoggedIn from '../components/NavbarLoggedIn';
+import { connect } from 'react-redux';
+import DropDown from '../components/DropDown';
+// import DropDown from '../components/DropDown';
 
 const StyledContainer = styled.div`
   font-family: 'MuseoSans_500';
@@ -46,10 +47,16 @@ class Home extends Component {
     };
   }
   render() {
+    console.log(this.props.datauser);
+
     return (
       <StyledContainer>
-        <Navbar />
-
+        {this.props.datauser.status === false ? (
+          <DropDown datauser={this.props.datauser} />
+        ) : (
+          <Navbar />
+        )}
+        {/* <Navbar /> */}
         <div className='slider1'>
           <div className='fortext'>
             <h2>Selamat Pagi, Ticket Seekers !</h2>
@@ -171,4 +178,8 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  datauser: state.users.data
+});
+
+export default connect(mapStateToProps)(Home);
