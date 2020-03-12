@@ -20,7 +20,7 @@ const ProfileImage = styled.img`
 `;
 
 const DropdownContent = styled.div`
-  display: ${props => props.isShow};
+  /* display: ${props => props.isShow}; */
   position: relative;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -35,43 +35,41 @@ export default class DropDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isShow: false
+      display: 'none'
     };
   }
-
-  handleOnClick = () => {
-    // console.log(this.state.isShow);
-
-    this.setState({
-      isShow: this.state.isShow,
-      isHide: this.state.isHide
-    });
+  showMenu = () => {
+    if (this.state.display === 'none') {
+      this.setState({
+        display: 'block'
+      });
+    } else {
+      this.setState({
+        display: 'none'
+      });
+    }
   };
 
   render() {
     return (
       <Container>
         <span>{this.props.datauser.username}</span>
-        <ProfileImage
-          src={profile}
-          alt='profile'
-          onClick={this.handleOnClick}
-        />
-        <DropdownContent
-          isShow={this.state.isShow ? 'flex' : this.state.isHide}
-        >
-          <div>
-            <Link to='/ticket'>Tiket Saya</Link>
-          </div>
+        <ProfileImage src={profile} alt='profile' onClick={this.showMenu} />
+        {/* <DropdownContent isShow={}> */}
+        <span style={{ display: `${this.state.display}` }}>
+          <DropdownContent>
+            <div>
+              <Link to='/ticket'>Tiket Saya</Link>
+            </div>
+            <div>
+              <Link to='/payment'>Payment</Link>
+            </div>
 
-          <div>
-            <Link to='/payment'>Payment</Link>
-          </div>
-
-          <div>
-            <Link to='/'>Logout</Link>
-          </div>
-        </DropdownContent>
+            <div>
+              <Link to='/'>Logout</Link>
+            </div>
+          </DropdownContent>
+        </span>
       </Container>
     );
   }

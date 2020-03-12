@@ -24,8 +24,8 @@ const Navs = styled.div`
 `;
 
 const Logo = styled.div`
-  font-weight: 9;
-  font-size: 20px;
+  font-weight: 2;
+  /* font-size: 20px; */
   color: black;
   font-style: italic;
 `;
@@ -45,7 +45,7 @@ class Navbar extends Component {
       <StyledContainer>
         <Navs>
           <Logo>
-            <span>Land Tick</span>
+            <p>Land Tick</p>
           </Logo>
 
           <LeftContainer>

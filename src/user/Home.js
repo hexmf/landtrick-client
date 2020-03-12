@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import { connect } from 'react-redux';
 import DropDown from '../components/DropDown';
 // import DropDown from '../components/DropDown';
+import { showTicket } from '../_actions/ticketA';
 
 const StyledContainer = styled.div`
   font-family: 'MuseoSans_500';
@@ -46,8 +47,27 @@ class Home extends Component {
       isAuth: false
     };
   }
+  componentDidMount() {
+    this.props.showTicket();
+  }
   render() {
-    console.log(this.props.datauser);
+    // console.log(this.props.datauser);
+
+    const { data } = this.props.showTickets;
+
+    let mytiket;
+    if (data) {
+      mytiket = data.tiket;
+    }
+    console.log(mytiket);
+
+    const duration = (sd, ed) => {
+      // console.log(sd, ed);
+      const start = sd.substring(0, 2);
+      const end = ed.substring(0, 2);
+
+      return parseInt(end) - parseInt(start);
+    };
 
     return (
       <StyledContainer>
@@ -149,66 +169,35 @@ class Home extends Component {
             <h4>Duration</h4>
             <h4>Price per person</h4>
           </ScheduleTitle>
-          <Train>
-            <div>
-              <span>Argo Wilis</span>
-              <p>Eksekutif (H)</p>
-            </div>
-            <div>
-              <span>05.00</span>
-              <p>Gambir</p>
-            </div>
-            <div>
-              <span>10.05</span>
-              <p>Surabaya</p>
-            </div>
-            <div>
-              <span>5h 05m </span>
-            </div>
-            <div>
-              <span>Rp. 250.000</span>
-            </div>
-          </Train>
-          <Train>
-            <div>
-              <span>Argo Wilis</span>
-              <p>Eksekutif (H)</p>
-            </div>
-            <div>
-              <span>05.00</span>
-              <p>Gambir</p>
-            </div>
-            <div>
-              <span>10.05</span>
-              <p>Surabaya</p>
-            </div>
-            <div>
-              <span>5h 05m </span>
-            </div>
-            <div>
-              <span>Rp. 250.000</span>
-            </div>
-          </Train>
-          <Train>
-            <div>
-              <span>Argo Wilis</span>
-              <p>Eksekutif (H)</p>
-            </div>
-            <div>
-              <span>05.00</span>
-              <p>Gambir</p>
-            </div>
-            <div>
-              <span>10.05</span>
-              <p>Surabaya</p>
-            </div>
-            <div>
-              <span>5h 05m </span>
-            </div>
-            <div>
-              <span>Rp. 250.000</span>
-            </div>
-          </Train>
+          {mytiket
+            ? mytiket.map((value, key) => {
+                return (
+                  <Train>
+                    {/* {console.log(value)} */}
+                    <div>
+                      <span>{value.name_train}</span>
+                      <p>{value.typekeretum.name}</p>
+                    </div>
+                    <div>
+                      <span>{value.startTime}</span>
+                      <p>{value.startStation}</p>
+                    </div>
+                    <div>
+                      <span>{value.arivalTime}</span>
+                      <p>{value.destinationStation}</p>
+                    </div>
+                    <div>
+                      <span>
+                        {duration(value.startTime, value.arivalTime)} H{' '}
+                      </span>
+                    </div>
+                    <div>
+                      <span>{value.price}</span>
+                    </div>
+                  </Train>
+                );
+              })
+            : null}
         </AllSchedule>
 
         <Footer />
@@ -217,8 +206,13 @@ class Home extends Component {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return { showTicket: data => dispatch(showTicket(data)) };
+};
+
 const mapStateToProps = state => ({
-  datauser: state.users.data
+  datauser: state.users.data,
+  showTickets: state.showTicket.data
 });
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
