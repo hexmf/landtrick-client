@@ -38,6 +38,7 @@ const Train = styled.div`
   border: 1px solid #b7b7b7;
   box-sizing: border-box;
   border-radius: 5px;
+  cursor: pointer;
 `;
 
 class Home extends Component {
@@ -45,11 +46,18 @@ class Home extends Component {
     super(props);
     this.state = {
       isAuth: false
+      // create state here
     };
   }
+
+  // function to change boxes
+
   componentDidMount() {
     this.props.showTicket();
   }
+  linkto = () => {
+    window.location.href = 'http://localhost:3000/ticket';
+  };
   render() {
     // console.log(this.props.datauser);
 
@@ -115,6 +123,7 @@ class Home extends Component {
             <p>Tiket Kereta Api</p>
             <div id='isitiketapi'>
               <h2>Asal</h2>
+              {/* change input here */}
               <input className='asal' type='text' placeholder='Jakarta' />
 
               <input className='chekbox' type='checkbox' />
@@ -142,9 +151,12 @@ class Home extends Component {
             </div>
           </div>
 
+          {/* 1. create button  here*/}
+
+          {/* change input 2 here */}
           <div className='tiketapikanan'>
             <h2>Tujuan</h2>
-            <input className='tujuan' type='text' placeholder='Tokyo' />
+            <input className='asal' type='text' placeholder='Tokyo' />
 
             <div>
               <h4 className='Dewasa1'>Dewasa</h4>
@@ -172,7 +184,7 @@ class Home extends Component {
           {mytiket
             ? mytiket.map((value, key) => {
                 return (
-                  <Train>
+                  <Train onClick={this.linkto}>
                     {/* {console.log(value)} */}
                     <div>
                       <span>{value.name_train}</span>

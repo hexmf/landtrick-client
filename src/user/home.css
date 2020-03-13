@@ -254,3 +254,9 @@
   height: 100px;
   border: solid #b7b7b7 1px;
 }
+
+.replacebutton {
+  position: absolute;
+  top: -50;
+  margin-left: 90px;
+}
