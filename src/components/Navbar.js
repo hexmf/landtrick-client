@@ -21,6 +21,7 @@ const Navs = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 0 6rem;
+  z-index: 1;
 `;
 
 const Logo = styled.div`

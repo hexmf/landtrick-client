@@ -18,12 +18,14 @@ const AllSchedule = styled.div`
   /* margin-top: 216px; */
   justify-content: space-around;
   margin-left: 250px;
+  /* margin-bottom: 200px !important; */
 `;
 
 const ScheduleTitle = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 1220px;
+  width: 1290px;
+  margin-top: 50px;
 `;
 
 const Train = styled.div`
@@ -60,6 +62,16 @@ class Home extends Component {
   };
   render() {
     // console.log(this.props.datauser);
+
+    // const { dataErr, error, isLogin } = this.props.users;
+    // // console.log(data);
+    // if (isLogin === true && data.role === 'false') {
+    //   window.localStorage.setItem('token', datausers.token);
+    //   window.location.href = 'http://localhost:3000/Home';
+    // } else if (isLogin === true && datausers.role === 'true') {
+    //   window.localStorage.setItem('token', datausers.token);
+    //   window.location.href = 'http://localhost:3000/IndexAdmin';
+    // }
 
     const { data } = this.props.showTickets;
 
@@ -179,7 +191,7 @@ class Home extends Component {
             <h4>Depart</h4>
             <h4>Arrive</h4>
             <h4>Duration</h4>
-            <h4>Price per person</h4>
+            <h4>Price in (Rp)</h4>
           </ScheduleTitle>
           {mytiket
             ? mytiket.map((value, key) => {

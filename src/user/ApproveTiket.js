@@ -1,47 +1,54 @@
-import React, { Component } from "react";
-import "./Ticket.css";
-import "./ApproveTiket.css";
+import React, { Component } from 'react';
+import './Ticket.css';
+import './ApproveTiket.css';
 
 class Ticket extends Component {
+  linkto = () => {
+    window.location.href = 'http://localhost:3000/';
+  };
   render() {
     return (
       <div>
         {/* header */}
-        <div className="header">
+        <div className='header'>
           <p>Land Tick</p>
           <h3>Joni</h3>
-          <img className="gambar_header" src={require("./Image/orang.PNG")} />
+          <img
+            onClick={this.linkto}
+            className='gambar_header'
+            src={require('./Image/orang.PNG')}
+          />
         </div>
         {/* body */}
 
-        <div className="tiketsaya">
+        <div className='tiketsaya'>
           <p>Tiket Saya</p>
         </div>
         {/* kiri */}
-        <div className="Tiket">
-          <div className="headerTiket">
+        <div className='Tiket'>
+          <div className='headerTiket'>
             <p>Land Ticket</p>
           </div>
           <div>
             <h2>Kereta Api</h2>
-            <p className="tanggalotw">Saturday, 21 Febuari 2020</p>
+            <p className='tanggalotw'>Saturday, 21 Febuari 2020</p>
           </div>
-          <div className="bodytiket">
+          <div className='bodytiket'>
             <h3>Argo Wills</h3>
             <p>Eksekutif (H)</p>
-            <div className="pending">
-              <p style={{ color: "green" }}>Approve</p>
+            <div className='pending'>
+              <p style={{ color: 'green' }}>Approve</p>
             </div>
-            <div className="tandapengenal">
+            <div className='tandapengenal'>
               <p>No. Tanda Pengenal</p>
             </div>
             <hr
               style={{
-                marginTop: "120px",
-                width: "570px"
+                marginTop: '120px',
+                width: '570px'
               }}
             ></hr>
-            <div className="paling_bawah">
+            <div className='paling_bawah'>
               <p>3018978263488291</p>
             </div>
           </div>
@@ -50,48 +57,48 @@ class Ticket extends Component {
           <div>
             <div>
               <img
-                className="img_tengah"
-                src={require("./Image/atasbawah.PNG")}
+                className='img_tengah'
+                src={require('./Image/atasbawah.PNG')}
               />
             </div>
-            <div className="start">
+            <div className='start'>
               <h3>05.00</h3>
-              <p style={{ color: "#959595" }}>24 Febuari 2020</p>
+              <p style={{ color: '#959595' }}>24 Febuari 2020</p>
             </div>
-            <div className="end">
+            <div className='end'>
               <h3>10.05</h3>
-              <p style={{ color: "#959595" }}>24 Febuari 2020</p>
+              <p style={{ color: '#959595' }}>24 Febuari 2020</p>
             </div>
-            <div className="namapemesan">
+            <div className='namapemesan'>
               <p>Nama Pemesan</p>
             </div>
-            <div className="anto_bawah">
-              <p>Anto</p>
+            <div className='anto_bawah'>
+              <p>Budi</p>
             </div>
           </div>
           {/* end tengah */}
           {/* kanan */}
           <div>
-            <div className="kotaberangkat">
+            <div className='kotaberangkat'>
               <h3>Jakarta(GMR)</h3>
-              <p style={{ color: "#959595" }}>Stasiun Gambir</p>
+              <p style={{ color: '#959595' }}>Stasiun Gambir</p>
             </div>
-            <div className="kotasampai">
+            <div className='kotasampai'>
               <h3>Surabaya(Sby)</h3>
-              <p style={{ color: "#959595" }}>Stasiun Surabaya</p>
+              <p style={{ color: '#959595' }}>Stasiun Surabaya</p>
             </div>
-            <div className="nohp">
+            <div className='nohp'>
               <p>No. Handphone</p>
             </div>
-            <div className="no_hp">
+            <div className='no_hp'>
               <p>085921311291</p>
             </div>
-            <div className="email">
+            <div className='email'>
               <p>Email</p>
-              <p style={{ color: "#959595" }}>Jojon@gmail.com</p>
+              <p style={{ color: '#959595' }}>Jojon@gmail.com</p>
             </div>
-            <div className="barcode">
-              <img src={require("./Image/barcode.PNG")} />
+            <div className='barcode'>
+              <img src={require('./Image/barcode.PNG')} />
             </div>
           </div>
           {/* end kanan */}

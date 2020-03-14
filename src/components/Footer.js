@@ -5,12 +5,13 @@ const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   width: 100%;
   height: 40px;
   background: linear-gradient(180deg, #ec7a7a 0%, #ec7ab7 100%);
   color: white;
+  margin-top: 20px;
 `;
 
 const Footer = () => {
