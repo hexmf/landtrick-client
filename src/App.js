@@ -1,36 +1,27 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-
-import Home from './components/Home';
-import AfterLogin from './components/AfterLogin';
-import MyTicket from './components/MyTicket';
-import Payment from './components/Payment';
-import TicketDetail from './components/TicketDetail';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      txt: 'This is the state text'
+    };
+  }
+
+  updateText(e) {
+    this.setState({ txt: e.target.value });
+  }
+
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/afterlogin'>
-            <AfterLogin />
-          </Route>
-          <Route path='/myticket'>
-            <MyTicket />
-          </Route>
-          <Route path='/payment'>
-            <Payment />
-          </Route>
-          <Route path='/ticketdetail'>
-            <TicketDetail />
-          </Route>
-        </Switch>
-      </Router>
+      <div className='App'>
+        <header className='App-header'>
+          <input type='text' onChange={this.updateText.bind(this)} />
+          <h1>{this.state.txt}</h1>
+        </header>
+      </div>
     );
   }
 }
