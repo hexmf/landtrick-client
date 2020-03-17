@@ -1,0 +1,75 @@
+.notice {
+  width: 796px;
+  height: 154px;
+  background: #eeeeee;
+  border: 1px solid #bbbbbb;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.landtick {
+  width: 796px;
+  height: 160px;
+  left: 133px;
+  top: 383px;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  border: 1px solid #b7b7b7;
+  box-sizing: border-box;
+}
+
+.rincian {
+  width: 446px;
+  height: 137px;
+  left: 135px;
+  top: 638px;
+
+  border: 1px solid #b7b7b7;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btnbayar > button {
+  width: 446px;
+  height: 40px;
+  left: 136px;
+  top: 797px;
+  color: white;
+
+  background: linear-gradient(90deg, #ec7ab7 -0.6%, #ec7a7a 100%);
+  border-radius: 5px;
+}
+
+.buktitransfer {
+  width: 215.2px;
+  height: 215.88px;
+  background-color: yellowgreen;
+}
+
+.qrcode {
+  width: 447px;
+  height: 414px;
+  background: #f5f5f5;
+}
+
+.qrcodeheader {
+  background: #d0d0d0;
+  width: 447px;
+  height: 115px;
+}
+
+.qrcodeleft {
+  display: flex;
+  flex-direction: row;
+}
+
+.qrcoderight {
+  display: flex;
+  flex-direction: row;
+}
